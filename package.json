@@ -1,0 +1,79 @@
+{
+  "name": "clipboard-2022",
+  "displayName": "ClipBoard 2022",
+  "description": "New Version of ClipBoard with Rich and cool Features on User Demand.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.66.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:clipboard-2022.copy",
+    "onCommand:clipboard-2022.select-code",
+    "onCommand:clipboard-2022.pasteCycle"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "ClipBoard 2022",
+      "properties": {
+        "clipboard-2022.size": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 12,
+          "description": "Maximumn no of items saved in clipboard"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "clipboard-2022.copy",
+        "title": "Copy | ClipBoard 2022"
+      },
+      {
+        "command": "clipboard-2022.select-code",
+        "title": "Select Code | ClipBoard 2022"
+      },
+      {
+        "command": "clipboard-2022.pasteCycle",
+        "title": "Paste Cycle | ClipBoard 2022"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "clipboard-2022.copy",
+        "key": "ctrl+c"
+      },
+      {
+        "command": "editor.action.clipboardPasteAction",
+        "key": "ctrl+v"
+      },
+      {
+        "command": "clipboard-2022.select-code",
+        "key": "ctrl+alt+v"
+      },
+      {
+        "command": "clipboard-2022.pasteCycle",
+        "key": "ctrl+shift+v"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.66.0",
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.0",
+    "@types/node": "14.x",
+    "eslint": "^8.11.0",
+    "glob": "^7.2.0",
+    "mocha": "^9.2.2",
+    "typescript": "^4.5.5",
+    "@vscode/test-electron": "^2.1.3"
+  }
+}
