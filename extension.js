@@ -73,10 +73,14 @@ function activate(context) {
       });
   }
 
-  function removeSelectedItem(item) {
-    clipboardArray.filter((clip) => {
-      return clip == item.description;
+  function removeQuickPickItem(item) {
+    let arr = clipboardArray.filter((clip) => {
+      return clip !== item.description;
     });
+
+    clipboardArray = arr;
+
+    vscode.window.showErrorMessage("Selected Item Deleted.");
   }
 
   var index = 0;
@@ -92,7 +96,7 @@ function activate(context) {
         editBuilder.replace(activeEditor.selection, text);
       });
     } else {
-      vscode.window.showInformationMessage("No Items to paste.");
+      vscode.window.showErrorMessage("No Items to paste.");
     }
   }
 
@@ -100,6 +104,23 @@ function activate(context) {
     vscode.commands.registerCommand("clipboard-2022.pasteCycle", () => {
       pasteCycle();
     })
+  );
+
+  disposableArray.push(
+    vscode.commands.registerCommand(
+      "clipboard-2022.removeQuickPickItem",
+      () => {
+        if (clipboardArray.length) {
+          vscode.window
+            .showQuickPick(makeQuickPickItems(clipboardArray))
+            .then((item) => {
+              removeQuickPickItem(item);
+            });
+        } else {
+          vscode.window.showErrorMessage("No Items in Clipboard.");
+        }
+      }
+    )
   );
 
   disposableArray.push(
@@ -117,15 +138,13 @@ function activate(context) {
           .then((item) => {
             if (item.description == "Clear All History") {
               clipboardArray = [];
-              vscode.window.showInformationMessage(
-                "ClipBoard History Deleted."
-              );
+              vscode.window.showErrorMessage("ClipBoard History Deleted.");
             } else {
               pasteSelectedItem(item);
             }
           });
       } else {
-        vscode.window.showInformationMessage("No Items in ClipBoard");
+        vscode.window.showErrorMessage("No Items in ClipBoard");
       }
     })
   );

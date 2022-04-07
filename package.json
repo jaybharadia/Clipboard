@@ -12,7 +12,8 @@
   "activationEvents": [
     "onCommand:clipboard-2022.copy",
     "onCommand:clipboard-2022.select-code",
-    "onCommand:clipboard-2022.pasteCycle"
+    "onCommand:clipboard-2022.pasteCycle",
+    "onCommand:clipboard-2022.removeQuickPickItem"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -39,6 +40,10 @@
       {
         "command": "clipboard-2022.pasteCycle",
         "title": "Paste Cycle | ClipBoard 2022"
+      },
+      {
+        "command": "clipboard-2022.removeQuickPickItem",
+        "title": "Remove Item from ClipBoard | ClipBoard 2022"
       }
     ],
     "keybindings": [
@@ -52,11 +57,15 @@
       },
       {
         "command": "clipboard-2022.select-code",
-        "key": "ctrl+alt+v"
+        "key": "ctrl+alt+p"
       },
       {
         "command": "clipboard-2022.pasteCycle",
         "key": "ctrl+shift+v"
+      },
+      {
+        "command": "clipboard-2022.removeQuickPickItem",
+        "key": "ctrl+alt+v d"
       }
     ]
   },
