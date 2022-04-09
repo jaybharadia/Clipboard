@@ -80,7 +80,7 @@ function activate(context) {
 
     clipboardArray = arr;
 
-    vscode.window.showErrorMessage("Selected Item Deleted.");
+    vscode.window.showInformationMessage("Selected Item Deleted.");
   }
 
   var index = 0;
@@ -96,7 +96,7 @@ function activate(context) {
         editBuilder.replace(activeEditor.selection, text);
       });
     } else {
-      vscode.window.showErrorMessage("No Items to paste.");
+      vscode.window.showInformationMessage("No Items to paste.");
     }
   }
 
@@ -117,7 +117,7 @@ function activate(context) {
               removeQuickPickItem(item);
             });
         } else {
-          vscode.window.showErrorMessage("No Items in Clipboard.");
+          vscode.window.showInformationMessage("No Items in Clipboard.");
         }
       }
     )
@@ -138,13 +138,15 @@ function activate(context) {
           .then((item) => {
             if (item.description == "Clear All History") {
               clipboardArray = [];
-              vscode.window.showErrorMessage("ClipBoard History Deleted.");
+              vscode.window.showInformationMessage(
+                "ClipBoard History Deleted."
+              );
             } else {
               pasteSelectedItem(item);
             }
           });
       } else {
-        vscode.window.showErrorMessage("No Items in ClipBoard");
+        vscode.window.showInformationMessage("No Items in ClipBoard");
       }
     })
   );

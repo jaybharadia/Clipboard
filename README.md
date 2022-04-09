@@ -16,7 +16,7 @@
 2. Paste from history
 3. Clear all history
 4. Remove selected item from history
-5. Cycle all copied items to paste without picking
+5. Cycle all copied items for pasting without picking one by one
 
 ## Keyboard Shortcuts
 
@@ -45,9 +45,5 @@ You can also add custom keyboard short cuts by following the instructions in the
 ### Erasing from Clipboard History
 
 ![demo](https://github.com/aefernandes/vscode-clipboard-history-extension/raw/master/images/demo-2.gif)
-
-### Editing Clipboard History
-
-![demo](https://github.com/aefernandes/vscode-clipboard-history-extension/raw/master/images/demo-3.gif)
 
 ---
