@@ -2,9 +2,10 @@
   "name": "clipboard-2022",
   "displayName": "ClipBoard 2022",
   "description": "New Version of ClipBoard with Rich and cool Features on User Demand.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "jaybharadia99",
   "licence": "LICENSE.md",
+  "icon": "images/clipboard.png",
   "bugs": {
     "url": "https://github.com/jaybharadia/Clipboard/issues"
   },
