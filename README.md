@@ -42,10 +42,14 @@ You can also add custom keyboard short cuts by following the instructions in the
 
 ### Saving to and Pasting from Clipboard History
 
-![demo](https://github.com/aefernandes/vscode-clipboard-history-extension/raw/master/images/demo-1.gif)
+![demo](https://raw.githubusercontent.com/jaybharadia/Clipboard/main/images/copy-and-paste-clipboard.gif)
 
-### Erasing from Clipboard History
+### Erasing from Clipboard History and Deleting Particular Item from List
 
-![demo](https://github.com/aefernandes/vscode-clipboard-history-extension/raw/master/images/demo-2.gif)
+![demo](https://raw.githubusercontent.com/jaybharadia/Clipboard/main/images/delete-clear-all-clipboard.gif)
+
+### Cycle Through List of Items and Paste according to requirements without having to pick from Dropdown
+
+![demo](https://raw.githubusercontent.com/jaybharadia/Clipboard/main/images/cycle-copy-items-clipboard.gif)
 
 ---
