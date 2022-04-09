@@ -2,9 +2,19 @@
   "name": "clipboard-2022",
   "displayName": "ClipBoard 2022",
   "description": "New Version of ClipBoard with Rich and cool Features on User Demand.",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "publisher": "jaybharadia99",
+  "licence": "LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/jaybharadia/Clipboard/issues"
+  },
+  "homepage": "https://github.com/jaybharadia/Clipboard/blob/main/README.md",
   "engines": {
     "vscode": "^1.66.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaybharadia/Clipboard"
   },
   "categories": [
     "Other"
@@ -74,6 +84,12 @@
     "pretest": "npm run lint",
     "test": "node ./test/runTest.js"
   },
+  "keywords": [
+    "Clipboard",
+    "ClipBoard 2022",
+    "Clipboard latest",
+    "Multiple copy paste"
+  ],
   "devDependencies": {
     "@types/vscode": "^1.66.0",
     "@types/glob": "^7.2.0",
