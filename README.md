@@ -3,7 +3,7 @@
   VS Code - ClipBoard 2022
   <br>
   <br>
-    <img src="https://raw.githubusercontent.com/aefernandes/vscode-clipboard-history-extension/master/images/logo.png" alt="logo" width="200">
+    <img src="https://raw.githubusercontent.com/jaybharadia/Clipboard/main/images/clipboard.png" alt="logo" width="200">
   <br>
 </h1>
 <h4 align="center">Keep a history of your copied and cut items and re-paste if needed.</h4>
@@ -25,6 +25,8 @@
 `Ctrl+C` copies and `Ctrl+X ` cuts the selected item. These override the default shortcuts to save the item to clipboard. If nothing is selected, the entire line will be saved.
 
 `Ctrl+V` pastes the most recent item.
+
+`Ctrl+Alt+P` opens dropdown for pasting item from a list of copied items.
 
 `Ctrl+Shift+V` Loops through available copied items and pastes it one at a time as user presses key binding continuously.
 
